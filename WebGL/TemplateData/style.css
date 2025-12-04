@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12pt;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+
+header {
+  position:sticky;
+  top:0;
+  width: 100%;
+  z-index: 10;
+  background-color: #629DD1;
+  padding: 20px;
+  text-align: center;
+}
+
+#alles{
+  display: flex;
+  flex-direction: column;
+  margin:0 20px;
+}
+
+#ueberschrift {
+  width:100%;
+  text-align: center;
+  margin-top: 20px;
+  padding:20px;
+  background: linear-gradient(to bottom, rgba(151, 206, 255, 0.5), rgba(255, 189, 189, 0.5));
+}
+
+nav ul {
+  display: flex;
+  gap:30px;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 40px;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  border: 1px solid transparent;
+  text-decoration: line-through;
+}
+
+nav #active a,
+a:hover {
+  border: 1px solid white;
+  background-color: #2A75B7;
+  border-radius: 10px;
+}
+
+
+
+header h1 {
+  font-size: 2em;
+  font-family: Arial, sans-serif;
+}
+
+header p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #555;
+}
+
+#infos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Zeilenumbruch bei zu wenig Platz */
+}
+
+#bedienung img,
+#navigation img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#bedienung,
+#navigation,
+#log {
+  padding: 20px 40px;
+}
+
+#bedienung,
+#navigation {
+  margin-top: 20px;
+  flex: 1;
+  border-radius: 20px;
+}
+
+
+#bedienung {
+  background: linear-gradient(to bottom, rgb(103, 149, 163), rgba(97, 125, 137, 0.236));
+}
+
+#navigation {
+  background: linear-gradient(to bottom, rgba(98, 137, 97, 1), rgba(98, 137, 97, 0.3));
+}
+
+#log {
+  margin-top: 20px;
+  padding: 20px;
+  background: linear-gradient(to bottom, rgba(200, 200, 200, 1), rgba(200, 200, 200, 0));
+  border-radius: 20px;
+}
+
+
+#unity-container {
+  display: block;
+  height: 0px;
+}
+
+#unity-container.unity-desktop {
+  left: auto;
+  top: auto;
+  transform: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#unity-container.unity-mobile {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+#unity-canvas {
+  background: #231F20;
+}
+
+.unity-mobile #unity-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+#unity-loading-bar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+#unity-logo {
+  width: 154px;
+  height: 130px;
+  background: url('unity-logo-dark.png') no-repeat center
+}
+
+#unity-progress-bar-empty {
+  width: 141px;
+  height: 18px;
+  margin-top: 10px;
+  margin-left: 6.5px;
+  background: url('progress-bar-empty-dark.png') no-repeat center
+}
+
+#unity-progress-bar-full {
+  width: 0%;
+  height: 18px;
+  margin-top: 10px;
+  background: url('progress-bar-full-dark.png') no-repeat center
+}
+
+.unity-footer-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  background-color: aquamarine;
+  margin-top: 20px;
+}
+
+#unity-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  position: relative;
+  width: 100%;
+  min-height: 38px;
+}
+
+
+.unity-mobile #unity-footer {
+  display: none
+}
+
+#unity-logo-title-footer {
+  width: 102px;
+  height: 38px;
+  background: url('unity-logo-title-footer.png') no-repeat center
+}
+
+#unity-build-title {
+  margin-right: 10px;
+  line-height: 38px;
+  font-family: arial;
+  font-size: 18px
+}
+
+#unity-fullscreen-button {
+  cursor: pointer;
+  width: 38px;
+  height: 38px;
+  background: url('fullscreen-button.png') no-repeat center
+}
+
+#unity-warning {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%);
+  background: white;
+  padding: 10px;
+  display: none
+}
+
+
+section p {
+  position: relative;
+  top: 0;
+  /* Canvas ist 600px hoch, also +300px von Mitte */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+
+}
