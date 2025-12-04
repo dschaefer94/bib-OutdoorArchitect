@@ -1,2 +1,4 @@
 # bib-OutdoorArchitect
-Outdoor Area Configurator for BIB International College – A support tool for the new campus concept.
+3D-Outdoor-Konfigurator des Campus des bib International College Paderborn
+
+Assets in Blender modelliert und als Unity-WebGL gebuildet 
